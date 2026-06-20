@@ -1,0 +1,23 @@
+.cadastro-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastro-card h1 {
+    text-align: center;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cadastro-link {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
