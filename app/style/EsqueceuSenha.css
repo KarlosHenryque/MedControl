@@ -1,0 +1,28 @@
+.forgot-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.forgot-button:hover {
+  color: #0077ff;
+}
+
+.custom-popup {
+  border-radius: 24px !important;
+  padding: 24px !important;
+}
+
+.custom-confirm {
+  background: #0077ff !important;
+  border-radius: 14px !important;
+}
+
+.custom-cancel {
+  background: #ff4d4d !important;
+  border-radius: 14px !important;
+}

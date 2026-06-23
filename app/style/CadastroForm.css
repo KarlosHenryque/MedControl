@@ -1,23 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .cadastro-container {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 100%);
+}
+
+.cadastro-card {
+  width: 100%;
+  max-width: 430px;
+  background: #f8fafc;
+  border-radius: 28px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
 }
 
 .cadastro-card h1 {
-    text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cadastro-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 .cadastro-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+}
+
+.cadastro-form input {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #dbe4ee;
+  background: #ffffff;
+  color: #475569;
+  font-size: 15px;
+  padding: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cadastro-form input::placeholder {
+  color: #94a3b8;
+}
+
+.cadastro-form input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.25);
+}
+
+.cadastro-form button {
+  height: 54px;
+  border: none;
+  border-radius: 18px;
+  background: #0077ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 6px;
+}
+
+.cadastro-form button:hover {
+  background: #3395ff;
+  transform: translateY(-1px);
 }
 
 .cadastro-link {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   margin-top: 10px;
+  gap: 12px;
+}
+
+.cadastro-link a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.cadastro-link a:hover {
+  color: #0077ff;
+}
+
+@media (max-width: 500px) {
+  .cadastro-card {
+    padding: 32px 24px;
+  }
+
+  .cadastro-card h1 {
+    font-size: 28px;
+  }
+
+  .cadastro-link {
+    flex-direction: column;
+    align-items: center;
+  }
 }
