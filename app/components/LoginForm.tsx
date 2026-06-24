@@ -64,7 +64,7 @@ export function LoginForm() {
         showConfirmButton: false,
       });
 
-      router.push("/medicamentos");
+      router.push("/pages/medicamentos");
     } catch (error) {
       Swal.close();
 
@@ -136,7 +136,7 @@ export function LoginForm() {
               Esqueceu a senha
             </a>
 
-            <a href="/cadastro">Cadastre-se</a>
+            <a href="/pages/cadastro">Cadastre-se</a>
           </div>
         </form>
       </div>

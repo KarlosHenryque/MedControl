@@ -2,7 +2,7 @@
 
 import Swal from "sweetalert2";
 
-import { MedicamentoForm } from "../components/MedicamentoForm";
+import { MedicamentoForm } from "../../components/MedicamentoForm";
 
 export default function MedicamentosPage() {
   async function handleNovoMedicamento() {
