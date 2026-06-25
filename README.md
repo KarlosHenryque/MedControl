@@ -3,47 +3,30 @@ Iniciar banco de dados "npx supabase start"
 Pausar banco de dados "npx supabase stop"
 
 CREATE TABLE medicamentos (
-id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
 
-```
-usuario_id INT NOT NULL,
+    usuario_id INT NOT NULL,
 
-nome VARCHAR(150) NOT NULL,
+    nome VARCHAR(150) NOT NULL,
 
-tipo VARCHAR(50) NOT NULL,
+    dosagem VARCHAR(50),
 
-dosagem VARCHAR(50) NOT NULL,
+    unidade VARCHAR(30),
 
-unidade VARCHAR(30) NOT NULL,
+    frequencia VARCHAR(50),
 
-quantidade_uso VARCHAR(50) NOT NULL,
+    horario TIME,
 
-frequencia VARCHAR(50) NOT NULL,
+    lembrete BOOLEAN DEFAULT TRUE,
 
-horario TIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
-data_inicio DATE NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
-data_fim DATE,
-
-uso_continuo BOOLEAN DEFAULT FALSE,
-
-estoque INT DEFAULT 0,
-
-observacao TEXT,
-
-lembrete BOOLEAN DEFAULT TRUE,
-
-criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-CONSTRAINT fk_usuario
-    FOREIGN KEY (usuario_id)
-    REFERENCES usuarios(id)
-    ON DELETE CASCADE
-```
-
+    CONSTRAINT fk_usuario
+        FOREIGN KEY (usuario_id)
+        REFERENCES usuarios(id)
+        ON DELETE CASCADE
 );
 
 ALTER TABLE medicamentos DISABLE ROW LEVEL SECURITY;
