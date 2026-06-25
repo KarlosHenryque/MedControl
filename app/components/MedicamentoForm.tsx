@@ -16,16 +16,6 @@ export function MedicamentoForm() {
           placeholder="Nome do medicamento"
         />
 
-        <select id="tipo" class="swal2-select">
-          <option value="">Tipo do medicamento</option>
-          <option>Comprimido</option>
-          <option>Cápsula</option>
-          <option>Xarope</option>
-          <option>Gotas</option>
-          <option>Pomada</option>
-          <option>Injeção</option>
-        </select>
-
         <div class="form-row">
 
           <input 
@@ -44,16 +34,6 @@ export function MedicamentoForm() {
 
         </div>
 
-        <input 
-          id="quantidadeUso" 
-          class="swal2-input" 
-          placeholder="Quantidade por uso"
-        />
-
-      </div>
-
-      <div class="med-section">
-
         <select id="frequencia" class="swal2-select">
           <option value="">Frequência</option>
           <option>1x ao dia</option>
@@ -65,7 +45,7 @@ export function MedicamentoForm() {
         </select>
 
         <label class="med-label">
-          Horário principal
+          Horário
         </label>
 
         <input 
@@ -76,66 +56,11 @@ export function MedicamentoForm() {
 
       </div>
 
-      <div class="med-section">
-
-        <div class="label-group">
-          <label>Início</label>
-
-          <input 
-            id="inicio" 
-            type="date" 
-            class="swal2-input" 
-          />
-        </div>
-
-        <div class="label-group">
-          <label>Fim</label>
-
-          <input 
-            id="fim" 
-            type="date" 
-            class="swal2-input" 
-          />
-        </div>
-
-      </div>
-
-      <label class="med-checkbox">
-        <span>Uso contínuo</span>
-
-        <div class="switch">
-          <input type="checkbox" id="usoContinuo" />
-
-          <span class="slider"></span>
-        </div>
-      </label>
-
-      <div class="med-section">
-
-        <input 
-          id="estoque" 
-          type="number"
-          class="swal2-input" 
-          placeholder="Quantidade disponível"
-        />
-
-      </div>
-
-      <div class="med-section">
-
-        <textarea
-          id="observacao"
-          class="swal2-textarea"
-          placeholder="Observações (ex: tomar após refeições)"
-        ></textarea>
-
-      </div>
-
       <label class="med-checkbox">
         <span>Ativar lembrete</span>
 
         <div class="switch">
-          <input type="checkbox" id="lembrete" />
+          <input type="checkbox" id="lembrete" checked />
 
           <span class="slider"></span>
         </div>
