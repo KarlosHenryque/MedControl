@@ -4,11 +4,10 @@ import bcrypt from "bcryptjs";
 
 export async function POST(req: Request) {
   try {
-   
     const body = await req.json();
     const { nome, email, senha } = body;
     const senhaHash = await bcrypt.hash(senha, 10);
-    
+
     const { data, error } = await supabase
       .from("usuarios")
       .insert([
@@ -28,7 +27,7 @@ export async function POST(req: Request) {
         },
         {
           status: 500,
-        }
+        },
       );
     }
 
@@ -39,9 +38,8 @@ export async function POST(req: Request) {
       },
       {
         status: 201,
-      }
+      },
     );
-
   } catch (error: any) {
     return NextResponse.json(
       {
@@ -50,7 +48,7 @@ export async function POST(req: Request) {
       },
       {
         status: 500,
-      }
+      },
     );
   }
 }

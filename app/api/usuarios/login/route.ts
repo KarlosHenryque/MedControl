@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     if (!email || !senha) {
       return NextResponse.json(
         { error: "Informe email e senha" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -22,17 +22,14 @@ export async function POST(req: Request) {
     if (error || !usuario) {
       return NextResponse.json(
         { error: "Usuário não encontrado" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
     const senhaValida = await bcrypt.compare(senha, usuario.senha);
 
     if (!senhaValida) {
-      return NextResponse.json(
-        { error: "Senha incorreta" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Senha incorreta" }, { status: 401 });
     }
 
     return NextResponse.json({
@@ -43,11 +40,7 @@ export async function POST(req: Request) {
         email: usuario.email,
       },
     });
-
   } catch (error: any) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
