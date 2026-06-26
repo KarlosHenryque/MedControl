@@ -1,44 +1,61 @@
 .swal2-popup {
   width: 680px !important;
   max-width: 95vw !important;
+
   border-radius: 28px !important;
+
   padding: 28px !important;
+
   background: #f8fafc !important;
   color: #334155 !important;
+
   box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
 }
 
 .med-form {
   display: flex;
   flex-direction: column;
+
   gap: 18px;
+
   padding-top: 6px;
 }
 
 .med-section {
   display: flex;
   flex-direction: column;
+
   gap: 12px;
+
   padding: 18px;
+
   border-radius: 22px;
+
   background: #ffffff;
+
   border: 1px solid #e2e8f0;
 }
 
 .med-title {
+  margin-bottom: 4px;
+
+  text-align: left;
+
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 4px;
-  text-align: left;
+
   color: #1e293b;
 }
 
 .med-label,
 .med-form label {
-  text-align: left;
   margin-left: 4px;
+
+  text-align: left;
+
   font-size: 14px;
   font-weight: 600;
+
   color: #64748b;
 }
 
@@ -46,14 +63,23 @@
 .swal2-select,
 .swal2-textarea {
   width: 100% !important;
+
   margin: 0 !important;
-  border-radius: 16px !important;
-  border: 1px solid #dbe4ee !important;
-  background: #ffffff !important;
-  color: #475569 !important;
-  font-size: 15px !important;
+
   padding: 14px 16px !important;
+
+  border-radius: 16px !important;
+
+  border: 1px solid #dbe4ee !important;
+
+  background: #ffffff !important;
+
+  color: #475569 !important;
+
+  font-size: 15px !important;
+
   box-sizing: border-box;
+
   transition: all 0.2s ease;
 }
 
@@ -63,12 +89,15 @@
 
 .swal2-select {
   height: 52px;
+
   cursor: pointer;
 }
 
 .swal2-textarea {
   min-height: 110px !important;
+
   resize: vertical;
+
   line-height: 1.5;
 }
 
@@ -81,12 +110,15 @@
 .swal2-select:focus,
 .swal2-textarea:focus {
   border-color: #60a5fa !important;
+
   box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2) !important;
 }
 
 .form-row {
   display: flex;
+
   gap: 12px;
+
   width: 100%;
 }
 
@@ -98,7 +130,9 @@
 .label-group {
   display: flex;
   flex-direction: column;
+
   gap: 6px;
+
   flex: 1;
 }
 
@@ -106,23 +140,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  gap: 12px;
+
   padding: 16px 18px;
+
   border-radius: 18px;
+
   background: #eef4ff;
+
   border: 1px solid #dbeafe;
+
   color: #475569;
+
   font-size: 15px;
   font-weight: 600;
 }
 
 .switch {
   position: relative;
+
   width: 54px;
   height: 30px;
+
+  flex-shrink: 0;
 }
 
 .switch input {
   opacity: 0;
+
   width: 0;
   height: 0;
 }
@@ -130,22 +176,33 @@
 .slider {
   position: absolute;
   inset: 0;
+
   background: #cbd5e1;
+
   border-radius: 999px;
+
   transition: 0.3s;
+
   cursor: pointer;
 }
 
 .slider::before {
   content: "";
+
   position: absolute;
+
   width: 22px;
   height: 22px;
+
   left: 4px;
   top: 4px;
+
   background: #ffffff;
+
   border-radius: 50%;
+
   transition: 0.3s;
+
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
 }
 
@@ -159,20 +216,29 @@
 
 .swal2-actions {
   width: 100%;
+
   gap: 12px;
+
   margin-top: 12px !important;
 }
 
 .swal2-confirm,
 .swal2-cancel {
   flex: 1;
+
   height: 52px;
-  border-radius: 16px !important;
+
+  margin: 0 !important;
+
   padding: 12px 24px !important;
+
+  border-radius: 16px !important;
+
   font-size: 15px !important;
   font-weight: 600 !important;
+
   box-shadow: none !important;
-  margin: 0 !important;
+
   transition: all 0.2s ease;
 }
 
@@ -183,6 +249,7 @@
 
 .swal2-confirm:hover {
   background: #1d4ed8 !important;
+
   transform: translateY(-1px);
 }
 
@@ -193,13 +260,17 @@
 
 .swal2-cancel:hover {
   background: #dc2626 !important;
+
   transform: translateY(-1px);
 }
 
 .swal2-html-container {
   max-height: 72vh;
+
   overflow-y: auto;
+
   padding-right: 6px;
+
   margin: 0 !important;
 }
 
@@ -213,31 +284,150 @@
 
 .swal2-html-container::-webkit-scrollbar-thumb {
   background: #cbd5e1;
+
   border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .swal2-popup {
+    width: 95vw !important;
+
+    padding: 20px !important;
+
+    border-radius: 24px !important;
+  }
+
+  .med-form {
+    gap: 16px;
+  }
+
+  .med-section {
+    padding: 16px;
+
+    border-radius: 18px;
+  }
+
+  .med-title {
+    font-size: 22px;
+  }
+
+  .swal2-input,
+  .swal2-select,
+  .swal2-textarea {
+    font-size: 14px !important;
+  }
+
+  .swal2-input,
+  .swal2-select {
+    height: 50px;
+  }
+
+  .swal2-confirm,
+  .swal2-cancel {
+    height: 50px;
+
+    font-size: 14px !important;
+  }
 }
 
 @media (max-width: 640px) {
   .swal2-popup {
-    width: 95vw !important;
-    padding: 18px !important;
-    border-radius: 22px !important;
+    width: 96vw !important;
+
+    padding: 16px !important;
+
+    border-radius: 20px !important;
+  }
+
+  .swal2-title {
+    font-size: 22px !important;
   }
 
   .form-row {
     flex-direction: column;
   }
 
-  .swal2-confirm,
-  .swal2-cancel {
-    height: 48px;
-    font-size: 14px !important;
+  .med-section {
+    padding: 14px;
   }
 
   .med-title {
     font-size: 20px;
   }
 
+  .med-checkbox {
+    padding: 14px 16px;
+
+    font-size: 14px;
+  }
+
+  .swal2-actions {
+    flex-direction: column;
+  }
+
+  .swal2-confirm,
+  .swal2-cancel {
+    width: 100% !important;
+
+    height: 48px;
+
+    font-size: 14px !important;
+  }
+
+  .swal2-html-container {
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .swal2-popup {
+    width: 97vw !important;
+
+    padding: 14px !important;
+  }
+
+  .swal2-title {
+    font-size: 20px !important;
+  }
+
   .med-section {
-    padding: 14px;
+    gap: 10px;
+
+    padding: 12px;
+
+    border-radius: 16px;
+  }
+
+  .swal2-input,
+  .swal2-select {
+    height: 48px;
+  }
+
+  .swal2-input,
+  .swal2-select,
+  .swal2-textarea {
+    padding: 12px 14px !important;
+
+    border-radius: 14px !important;
+
+    font-size: 13px !important;
+  }
+
+  .med-checkbox {
+    border-radius: 14px;
+  }
+
+  .switch {
+    width: 50px;
+    height: 28px;
+  }
+
+  .slider::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .switch input:checked + .slider::before {
+    transform: translateX(22px);
   }
 }
